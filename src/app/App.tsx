@@ -3,6 +3,7 @@ import { EventDetailsSection } from "./components/EventDetailsSection";
 import { CountdownSection } from "./components/CountdownSection";
 import { DressCodeSection } from "./components/DressCodeSection";
 import { GallerySection } from "./components/GallerySection";
+import { TraditionsSection } from "./components/TraditionsSection";
 import { MessageSection } from "./components/MessageSection";
 import { RSVPSection } from "./components/RSVPSection";
 import { FooterSection } from "./components/FooterSection";
@@ -14,7 +15,8 @@ export default function App() {
       <EventDetailsSection />
       <CountdownSection />
       <DressCodeSection />
-      <GallerySection />
+      <GallerySection />       
+      <TraditionsSection />
       <MessageSection />
       <RSVPSection />
       <FooterSection />
