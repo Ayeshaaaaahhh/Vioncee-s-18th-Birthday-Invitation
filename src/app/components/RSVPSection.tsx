@@ -76,7 +76,7 @@ export function RSVPSection() {
             className="text-[#0A3323] text-4xl mb-3"
             style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 600 }}
           >
-            RSVP
+            Confirm Your Attendance Here!
           </h3>
         </div>
 
@@ -156,7 +156,7 @@ export function RSVPSection() {
                 disabled={loading}
                 className="w-full py-4 rounded-2xl bg-[#D3968C] text-white"
               >
-                {loading ? "SENDING..." : "RSVP NOW"}
+                {loading ? "SENDING..." : "Confirm"}
               </button>
             </form>
           )}
