@@ -70,7 +70,7 @@ const traditions = [
       "14. Ceazar Ian Bajuyo",
       "15. Pauline Mae Salcedo",
       "16. Jyra Maurisze Bacasmot",
-      "17. ____",
+      "17. Keisha Jane Abrogueña",
       "18. ____",
     ],
   },
