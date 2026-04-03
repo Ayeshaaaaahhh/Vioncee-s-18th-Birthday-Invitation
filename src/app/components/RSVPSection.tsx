@@ -31,22 +31,22 @@ export function RSVPSection() {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyNoTXeyKTYVZrP-7NEhaJYpv5p9c0MxWbYoMTAKEFxY2Nb_X2sKi6UQSHZCB4AFYPi/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            attendance: formData.attendance,
-            timestamp: new Date().toISOString(),
-          }),
-        }
-      );
+      const response = await fetch("https://api.staticforms.xyz/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          accessKey: "sf_56c727498f41e88a6e2d4784", 
+          name: formData.name,
+          attendance: formData.attendance,
+          subject: "New RSVP Submission",
+        }),
+      });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setSubmitted(true);
 
         setTimeout(() => {
@@ -58,7 +58,7 @@ export function RSVPSection() {
           setErrors({ name: false, attendance: false });
         }, 3000);
       } else {
-        alert("Something went wrong. Try again.");
+        alert(data.message || "Something went wrong. Try again.");
       }
     } catch (error) {
       alert("Error submitting form.");
@@ -70,8 +70,10 @@ export function RSVPSection() {
   return (
     <section className="py-20 px-6 bg-[#F7F4D5] relative overflow-hidden">
       <motion.div className="max-w-md mx-auto relative z-10">
+
         <div className="text-center mb-10">
-          <h3 className="text-[#0A3323] text-4xl mb-3"
+          <h3
+            className="text-[#0A3323] text-4xl mb-3"
             style={{ fontFamily: "Cormorant Garamond, serif", fontWeight: 600 }}
           >
             RSVP
