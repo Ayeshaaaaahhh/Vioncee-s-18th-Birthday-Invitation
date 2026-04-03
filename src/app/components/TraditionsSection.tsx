@@ -227,8 +227,8 @@ export function TraditionsSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + pIndex * 0.02, duration: 0.4 }}
-                      className="text-[#105666]/60 text-xs leading-relaxed"
-                      style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 300 }}
+                      className="text-[#0A3323]/85 text-sm leading-relaxed tracking-wide"
+                      style={{ fontFamily: 'Great Vibes, cursive' }}
                     >
                       {participant}
                     </motion.div>
