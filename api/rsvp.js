@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     console.log("Incoming RSVP:", req.body);
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyNoTXeyKTYVZrP-7NEhaJYpv5p9c0MxWbYoMTAKEFxY2Nb_X2sKi6UQSHZCB4AFYPi/exec",
+      "https://script.google.com/macros/s/AKfycbxN3UzLGp0s9JkW0xwFfNYVpDOri52LhhhCjS4JGn3vAvjdjQPj_S9jrnICZJqD1yIv/exec",
       {
         method: "POST",
         headers: {

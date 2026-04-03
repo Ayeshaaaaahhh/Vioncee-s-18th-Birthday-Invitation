@@ -31,17 +31,20 @@ export function RSVPSection() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/rsvp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          attendance: formData.attendance,
-          timestamp: new Date().toISOString(), // 👈 auto timestamp
-        }),
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyNoTXeyKTYVZrP-7NEhaJYpv5p9c0MxWbYoMTAKEFxY2Nb_X2sKi6UQSHZCB4AFYPi/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            attendance: formData.attendance,
+            timestamp: new Date().toISOString(),
+          }),
+        }
+      );
 
       if (response.ok) {
         setSubmitted(true);
